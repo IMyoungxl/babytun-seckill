@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.young.babytunseckill.dao.GoodsDAO">
+    <select id="findGoodsById" parameterType="java.lang.Integer" resultType="com.young.babytunseckill.entity.Goods">
+        select * from t_goods where goods_id = #{goodsId}
+    </select>
+
+    <select id="findGoodsCover" parameterType="java.lang.Integer" resultType="com.young.babytunseckill.entity.GoodsCover">
+        select * from t_goods_cover where goods_id = #{goodsId}
+    </select>
+
+    <select id="findGoodsParam" parameterType="java.lang.Integer" resultType="com.young.babytunseckill.entity.Param">
+        select * from t_goods_param where goods_id = #{goodsId};
+    </select>
+
+    <select id="findGoodsDetail" parameterType="java.lang.Integer" resultType="com.young.babytunseckill.entity.GoodsDetail">
+        select * from t_goods_detail where goods_id = #{goodsId}
+    </select>
+
+
+</mapper>
